@@ -42,7 +42,7 @@ Les widgets sont chargés depuis leur **adresse stable** (`…/v1/`) : une évol
 - **Questionnaire** : page *Questionnaire de satisfaction*, puis onglet *Publication* pour obtenir le lien à envoyer.
 - **Indicateurs** : page *Régler les indicateurs*.
 
-Les réglages sont enregistrés dans le document. Les widgets partagent aussi les mêmes réglages d'en-tête et de pied de page.
+Les réglages sont enregistrés dans le document. Ils partagent les mêmes réglages d'en-tête et de pied de page.
 
 ## Données et droits d'accès
 
@@ -63,7 +63,8 @@ Les fichiers de ce dépôt ne contiennent aucune donnée réelle. L'exemple est 
 - [espace-pilotage](https://github.com/lab17bis/espace-pilotage) : regarder et décider : un écran d'équipe qui rassemble indicateurs, réunions, projets et management visuel.
 - [espace-collaboratif](https://github.com/lab17bis/espace-collaboratif) : faire ensemble : réunions, projets partagés et ressources communes d'une équipe.
 - [espace-sondage](https://github.com/lab17bis/espace-sondage) : concevoir un questionnaire, savoir qui a répondu et lire les résultats en indicateurs.
-- [espace-reseau](https://github.com/lab17bis/espace-reseau) : animer un réseau ou une communauté de pratique : membres, groupes, rencontres, présences, ressources partagées et retours.
+- [espace-reseau](https://github.com/lab17bis/espace-reseau) : animer un réseau ou une communauté de pratique : membres, groupes, rencontres, présences, ressources partagées, retours, carte et liens entre acteurs.
+- [espace-contributions](https://github.com/lab17bis/espace-contributions) : faire participer : boîte à idées, valorisation des réalisations des équipes, votes et suites données.
 
 ## Écosystème
 
