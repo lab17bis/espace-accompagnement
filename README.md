@@ -8,7 +8,7 @@ Un **espace** est un document Grist complet — tables, formules, pages, widgets
 
 - **Présenter l'offre de service** dans un catalogue au DSFR, consultable dans Grist ou publiable en page publique.
 - **Suivre chaque sollicitation** : qui la porte, la prestation demandée, son statut, la prochaine étape et son échéance. Les échéances dépassées sont signalées.
-- **Retrouver une personne** : sa fiche contact rassemble ses coordonnées, toutes ses sollicitations et sa satisfaction moyenne. L'annuaire se construit au fil des sollicitations.
+- **Retrouver une personne** : sa fiche contact rassemble ses coordonnées, toutes ses sollicitations et sa satisfaction moyenne. L'annuaire se construit au fil des sollicitations, sans doublon : une même personne n'a qu'une fiche.
 - **Recueillir la satisfaction** avec un questionnaire au DSFR (notes sur une échelle, commentaire). Une réponse est rattachée au contact par son adresse électronique.
 - **Lire l'activité** dans un tableau de bord : sollicitations par mois et par prestation, statuts, satisfaction.
 
@@ -17,7 +17,8 @@ Un **espace** est un document Grist complet — tables, formules, pages, widgets
 | Page | Outil | Contenu |
 | --- | --- | --- |
 | **Sollicitations** | tables Grist | Liste des sollicitations et fiche détaillée de la sollicitation choisie. Table `Sollicitations`. |
-| **Contacts** | tables Grist | Liste des contacts, fiche contact et sollicitations de la personne choisie. Table `Contacts`. |
+| **Contacts** | tables Grist | Liste des contacts, fiche contact et sollicitations de la personne choisie. Table `Personnes`, partagée avec l'annuaire. |
+| **Annuaire** | [grist-annuaire](https://github.com/lab17bis/grist-annuaire) | Personnes et structures du document : recherche, fiches, structures en arborescence, doublons et fusion, import CSV, archivage. Tables `Personnes`, `Structures` et `Comptes`. |
 | **Offre de service** | [grist-catalogue](https://github.com/lab17bis/grist-catalogue) | Catalogue des prestations. Page *Prestations* pour les modifier, page *Régler l'offre de service* pour la présentation. Table `Offre`. |
 | **Satisfaction** | [grist-questionnaire](https://github.com/lab17bis/grist-questionnaire) | Réponses reçues et page *Questionnaire de satisfaction* pour concevoir et publier le questionnaire. Table `Satisfaction`. |
 | **Indicateurs** | [grist-graphique](https://github.com/lab17bis/grist-graphique) | Tableau de bord. Page *Régler les indicateurs* pour le modifier. |
@@ -37,6 +38,7 @@ Les widgets sont chargés depuis leur **adresse stable** (`…/v1/`) : une évol
 
 ## Le régler
 
+- **Annuaire** : onglet *Réglages* du widget (champs prévus et personnalisés, types de structures, délai de conservation, mention d'information, règles d'accès). Cochez *Gestionnaire de l'annuaire* sur la fiche des personnes qui tiennent l'annuaire.
 - **Listes** : statuts, canaux, personnes qui suivent (*Suivie par*) et types de prestation se modifient dans les colonnes de choix de Grist.
 - **Offre de service** : remplacez les prestations d'exemple dans la page *Prestations*.
 - **Questionnaire** : page *Questionnaire de satisfaction*, puis onglet *Publication* pour obtenir le lien à envoyer.
@@ -46,17 +48,22 @@ Les réglages sont enregistrés dans le document. Ils partagent les mêmes régl
 
 ## Données et droits d'accès
 
-L'espace n'installe **aucune règle d'accès** : toute personne invitée dans le document voit toutes les sollicitations et tous les contacts. Les fiches contact contiennent des données personnelles : n'invitez que les personnes qui assurent le suivi, et adaptez au besoin les *Permissions avancées*.
+L'espace n'installe que les **règles d'accès de l'annuaire** : rôle *gestionnaire de l'annuaire* (fiches modifiables sans être propriétaire) et aucune personne visible d'un visiteur anonyme, même si le document est public. Les autres tables (sollicitations, satisfaction) restent accessibles à toute personne invitée. Les fiches contact contiennent des données personnelles : n'invitez que les personnes qui assurent le suivi, et adaptez au besoin les *Permissions avancées*.
 
 Les tables `Personnes` et `Structures`, quand l'espace en contient, suivent la règle commune des widgets : un widget de la famille ajouté plus tard les reprend et les complète, au lieu d'en créer d'autres.
 
 Les fichiers de ce dépôt ne contiennent aucune donnée réelle. L'exemple est entièrement fictif.
+
+## Le reconstruire
+
+Le dossier [`outils/`](outils) contient de quoi reconstruire l'espace dans un document Grist neuf, par exemple pour l'adapter : `construire.js` (le constructeur commun) et `espace-accompagnement.js` (la description de l'espace : tables, formules, pages, widgets, réglages et données fictives). Les deux s'exécutent dans la console du navigateur, sur une page Grist où vous êtes connecté. La plupart des personnes n'en ont pas besoin : importer le fichier `.grist` suffit.
 
 ## Widgets utilisés
 
 - [grist-questionnaire](https://github.com/lab17bis/grist-questionnaire) : questionnaires au DSFR avec logique conditionnelle et notes sur une échelle.
 - [grist-catalogue](https://github.com/lab17bis/grist-catalogue) : catalogue de fiches au DSFR, avec recherche et filtres.
 - [grist-graphique](https://github.com/lab17bis/grist-graphique) : tableaux de bord et indicateurs à seuils au DSFR.
+- [grist-annuaire](https://github.com/lab17bis/grist-annuaire) : annuaire des personnes et des structures d'un document : recherche, fiches, doublons, import, protection des données.
 
 ## Autres espaces
 

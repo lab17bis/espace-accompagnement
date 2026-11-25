@@ -101,6 +101,7 @@ window.SPEC_ACCOMPAGNEMENT = (function () {
     pages: [
       { nom: 'Sollicitations', table: 'Sollicitations', sections: [{ table: 'Sollicitations', type: 'single', titre: 'Fiche de la sollicitation', lien: { depuis: 'principale' } }] },
       { nom: 'Contacts', table: 'Personnes', sections: [{ cle: 'fiche', table: 'Personnes', type: 'single', titre: 'Fiche contact', lien: { depuis: 'principale' } }, { table: 'Sollicitations', type: 'record', titre: 'Ses sollicitations', lien: { depuis: 'principale', colonne: 'Contact' } }] },
+      { nom: 'Annuaire', sections: [{ table: 'Personnes', type: 'custom', titre: 'Annuaire', url: W + 'grist-annuaire/v1/index.html' }] },
       { nom: 'Offre de service', sections: [{ table: 'Offre', type: 'custom', titre: 'Offre de service', url: W + 'grist-catalogue/v1/index.html' }] },
       { nom: 'Régler l\'offre de service', indent: 1, sections: [{ table: 'Offre', type: 'custom', titre: 'Réglages du catalogue', url: W + 'grist-catalogue/v1/editeur.html' }] },
       { nom: 'Prestations', indent: 1, table: 'Offre' },
