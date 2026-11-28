@@ -19,9 +19,9 @@ Un **espace** est un document Grist complet — tables, formules, pages, widgets
 | **Sollicitations** | tables Grist | Liste des sollicitations et fiche détaillée de la sollicitation choisie. Table `Sollicitations`. |
 | **Contacts** | tables Grist | Liste des contacts, fiche contact et sollicitations de la personne choisie. Table `Personnes`, partagée avec l'annuaire. |
 | **Annuaire** | [grist-annuaire](https://github.com/lab17bis/grist-annuaire) | Personnes et structures du document : recherche, fiches, structures en arborescence, doublons et fusion, import CSV, archivage. Tables `Personnes`, `Structures` et `Comptes`. |
-| **Offre de service** | [grist-catalogue](https://github.com/lab17bis/grist-catalogue) | Catalogue des prestations. Page *Prestations* pour les modifier, page *Régler l'offre de service* pour la présentation. Table `Offre`. |
+| **Offre de service** | [grist-catalogue](https://github.com/lab17bis/grist-catalogue) | Catalogue des prestations. Page *Prestations* pour les modifier, page *Éditeur de l'offre de service* pour la présentation. Table `Offre`. |
 | **Satisfaction** | [grist-questionnaire](https://github.com/lab17bis/grist-questionnaire) | Réponses reçues et page *Questionnaire de satisfaction* pour concevoir et publier le questionnaire. Table `Satisfaction`. |
-| **Indicateurs** | [grist-graphique](https://github.com/lab17bis/grist-graphique) | Tableau de bord. Page *Régler les indicateurs* pour le modifier. |
+| **Indicateurs** | [grist-graphique](https://github.com/lab17bis/grist-graphique) | Tableau de bord. Page *Éditeur des indicateurs* pour le modifier. |
 
 ## L'installer en 2 minutes
 
@@ -42,7 +42,7 @@ Les widgets sont chargés depuis leur **adresse stable** (`…/v1/`) : une évol
 - **Listes** : statuts, canaux, personnes qui suivent (*Suivie par*) et types de prestation se modifient dans les colonnes de choix de Grist.
 - **Offre de service** : remplacez les prestations d'exemple dans la page *Prestations*.
 - **Questionnaire** : page *Questionnaire de satisfaction*, puis onglet *Publication* pour obtenir le lien à envoyer.
-- **Indicateurs** : page *Régler les indicateurs*.
+- **Indicateurs** : page *Éditeur des indicateurs*.
 
 Les réglages sont enregistrés dans le document. Ils partagent les mêmes réglages d'en-tête et de pied de page.
 

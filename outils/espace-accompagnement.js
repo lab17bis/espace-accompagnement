@@ -103,12 +103,12 @@ window.SPEC_ACCOMPAGNEMENT = (function () {
       { nom: 'Contacts', table: 'Personnes', sections: [{ cle: 'fiche', table: 'Personnes', type: 'single', titre: 'Fiche contact', lien: { depuis: 'principale' } }, { table: 'Sollicitations', type: 'record', titre: 'Ses sollicitations', lien: { depuis: 'principale', colonne: 'Contact' } }] },
       { nom: 'Annuaire', sections: [{ table: 'Personnes', type: 'custom', titre: 'Annuaire', url: W + 'grist-annuaire/v1/index.html' }] },
       { nom: 'Offre de service', sections: [{ table: 'Offre', type: 'custom', titre: 'Offre de service', url: W + 'grist-catalogue/v1/index.html' }] },
-      { nom: 'Régler l\'offre de service', indent: 1, sections: [{ table: 'Offre', type: 'custom', titre: 'Réglages du catalogue', url: W + 'grist-catalogue/v1/editeur.html' }] },
+      { nom: 'Régler l\'offre de service', indent: 1, sections: [{ table: 'Offre', type: 'custom', titre: 'Éditeur du widget', url: W + 'grist-catalogue/v1/editeur.html' }] },
       { nom: 'Prestations', indent: 1, table: 'Offre' },
       { nom: 'Satisfaction', table: 'Satisfaction' },
-      { nom: 'Questionnaire de satisfaction', indent: 1, sections: [{ table: 'Satisfaction', type: 'custom', titre: 'Questionnaire', url: W + 'grist-questionnaire/v1/editeur.html' }] },
+      { nom: 'Questionnaire de satisfaction', indent: 1, sections: [{ table: 'Satisfaction', type: 'custom', titre: 'Éditeur du widget', url: W + 'grist-questionnaire/v1/editeur.html' }] },
       { nom: 'Indicateurs', sections: [{ table: 'Sollicitations', type: 'custom', titre: 'Indicateurs', url: W + 'grist-graphique/v1/index.html' }] },
-      { nom: 'Régler les indicateurs', indent: 1, sections: [{ table: 'Sollicitations', type: 'custom', titre: 'Réglages des indicateurs', url: W + 'grist-graphique/v1/editeur.html' }] }
+      { nom: 'Éditeur des indicateurs', indent: 1, sections: [{ table: 'Sollicitations', type: 'custom', titre: 'Éditeur du widget', url: W + 'grist-graphique/v1/editeur.html' }] }
     ] };
 })();
 'ok';
